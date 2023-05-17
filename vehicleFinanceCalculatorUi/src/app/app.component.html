@@ -1,0 +1,117 @@
+
+<body translate="no">
+
+  <div class="container">
+  <div class="sky">
+
+    <div class="stars"></div>
+    <div class="stars1"></div>
+
+    <div class="stars2"></div>
+    <div class="shooting-stars"></div>
+
+    <div fxLayout="row" fxLayoutAlign="center center"  >
+      <div fxFlex.gt-lg="20" fxFlex.gt-md="20" fxFlex.gt-xs="20" fxFlex="20">
+        <img src="../assets/RUNNINGHILL LOGO_TRANSPARENT_EXCL_ICECREAM_SCOOP.png" height="70%" width="70%" alt="rhlogo"/>
+      </div>
+
+      <!-- column -->
+      <div fxFlex.gt-lg="60" fxFlex.gt-md="60" fxFlex.gt-xs="60" fxFlex="60">
+        <h1 class="sign">HELLO DEVCONF</h1>
+      </div>
+
+      <div fxFlex.gt-lg="20" fxFlex.gt-md="20" fxFlex.gt-xs="20" fxFlex="20">
+
+      </div>
+
+    </div>
+    <div fxLayout="row"  fxLayoutGap="1%" fxLayoutAlign="center center">
+      <!-- column -->
+      <div fxFlex.gt-lg="50" fxFlex.gt-md="50" fxFlex.gt-xs="50" fxFlex="50">
+        <mat-card style="border: 3px solid  #03A9F4">
+
+          <form >
+            <div fxLayout="row wrap" class="padding-2">
+              <!-- column -->
+              <div fxFlex.gt-lg="100" fxFlex.gt-md="100" fxFlex.gt-xs="100" fxFlex="100">
+                <p>
+                  <mat-form-field appearance="outline" class="width-100">
+                    <mat-label>Vehicle Description</mat-label>
+                    <input matInput placeholder="Placeholder"  />
+                    <mat-icon matSuffix>directions_car</mat-icon>
+                  </mat-form-field>
+                </p>
+              </div>
+              <div fxFlex.gt-lg="100" fxFlex.gt-md="100" fxFlex.gt-xs="100" fxFlex="100">
+                <p>
+                  <mat-form-field appearance="outline" class="width-100">
+                    <mat-label>Vehicle Finance Amount</mat-label>
+                    <input matInput type="number" placeholder="Placeholder"  />
+                    <mat-icon matSuffix>account_balance</mat-icon>
+                  </mat-form-field>
+                </p>
+              </div>
+              <div fxFlex.gt-lg="100" fxFlex.gt-md="100" fxFlex.gt-xs="100" fxFlex="100">
+                <h3>Payment term (months)</h3>
+                <mat-slider
+                  min="0"
+                  max="120"
+                  step="12"
+                  discrete
+                  [displayWith]="formatLabelMonths"
+                  class="width-100"
+                >
+                  <input matSliderThumb />
+                </mat-slider>
+              </div>
+              <div fxFlex.gt-lg="100" fxFlex.gt-md="100" fxFlex.gt-xs="100" fxFlex="100">
+                <h3>Interest Rate</h3>
+                <mat-slider
+                  min="0"
+                  max="30"
+                  step="0.1"
+                  discrete
+                  [displayWith]="formatLabelPercentage"
+                  class="width-100"
+                >
+                  <input  matSliderThumb />
+                </mat-slider>
+              </div>
+            </div>
+            <mat-card-actions>
+              <button mat-button color="primary" >Save and Calculate</button>
+            </mat-card-actions>
+          </form>
+        </mat-card>
+      </div>
+    </div>
+
+    <div fxLayout="row" class="padding-2" fxLayoutGap="1%" fxLayoutAlign="center center">
+
+      <div fxFlex.gt-lg="25" fxFlex.gt-md="25" fxFlex.gt-xs="25" fxFlex="25" >
+        <mat-card style="border: 3px solid  #03A9F4">
+          <div fxLayout="row" class="padding-2" fxLayoutGap="1%">
+            <!-- column -->
+            <div
+              fxFlex.gt-lg="100"
+              fxFlex.gt-md="100"
+              fxFlex.gt-xs="100"
+              fxFlex="100"
+            >
+            <h3>Vehicle Description</h3>
+            <h3>Vehicle Finance Amount</h3>
+            <h3>Payment Term </h3>
+            <h3>Interest Rate </h3>
+            <h3>Total Monthly Payment </h3>
+            <h2>Total Payment </h2>
+          </div>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
