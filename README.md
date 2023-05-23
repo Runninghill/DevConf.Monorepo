@@ -1,3 +1,11 @@
+# Workshop checklist
+
+- Docker
+- VSCODE
+- ChatGPT
+- Mintlify & Tabnine
+- AI Commits globally installed
+
 # Vehicle Finance Calculator Monorepo
 
 This monorepo contains the following applications and technologies:
