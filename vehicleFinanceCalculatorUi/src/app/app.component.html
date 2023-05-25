@@ -30,14 +30,14 @@
       <div fxFlex.gt-lg="50" fxFlex.gt-md="50" fxFlex.gt-xs="50" fxFlex="50">
         <mat-card style="border: 3px solid  #03A9F4">
 
-          <form >
+          <form [formGroup]="vehicleQuoteForm">
             <div fxLayout="row wrap" class="padding-2">
               <!-- column -->
               <div fxFlex.gt-lg="100" fxFlex.gt-md="100" fxFlex.gt-xs="100" fxFlex="100">
                 <p>
                   <mat-form-field appearance="outline" class="width-100">
                     <mat-label>Vehicle Description</mat-label>
-                    <input matInput placeholder="Placeholder"  />
+                    <input matInput placeholder="Placeholder" formControlName="vehicledescription" />
                     <mat-icon matSuffix>directions_car</mat-icon>
                   </mat-form-field>
                 </p>
@@ -46,7 +46,7 @@
                 <p>
                   <mat-form-field appearance="outline" class="width-100">
                     <mat-label>Vehicle Finance Amount</mat-label>
-                    <input matInput type="number" placeholder="Placeholder"  />
+                    <input matInput type="number" placeholder="Placeholder" formControlName="vehiclefinanceamount" />
                     <mat-icon matSuffix>account_balance</mat-icon>
                   </mat-form-field>
                 </p>
@@ -60,8 +60,9 @@
                   discrete
                   [displayWith]="formatLabelMonths"
                   class="width-100"
+
                 >
-                  <input matSliderThumb />
+                  <input matSliderThumb formControlName="paymenttermmonths" />
                 </mat-slider>
               </div>
               <div fxFlex.gt-lg="100" fxFlex.gt-md="100" fxFlex.gt-xs="100" fxFlex="100">
@@ -73,22 +74,24 @@
                   discrete
                   [displayWith]="formatLabelPercentage"
                   class="width-100"
+
                 >
-                  <input  matSliderThumb />
+                  <input matSliderThumb  formControlName="interestrate" />
                 </mat-slider>
               </div>
             </div>
             <mat-card-actions>
-              <button mat-button color="primary" >Save and Calculate</button>
+              <button mat-button color="primary" type="submit" (click)="submitForm()">Save and Calculate</button>
             </mat-card-actions>
           </form>
+
         </mat-card>
       </div>
     </div>
 
     <div fxLayout="row" class="padding-2" fxLayoutGap="1%" fxLayoutAlign="center center">
 
-      <div fxFlex.gt-lg="25" fxFlex.gt-md="25" fxFlex.gt-xs="25" fxFlex="25" >
+      <div fxFlex.gt-lg="25" fxFlex.gt-md="25" fxFlex.gt-xs="25" fxFlex="25" *ngFor="let item of vehicleQuotes">
         <mat-card style="border: 3px solid  #03A9F4">
           <div fxLayout="row" class="padding-2" fxLayoutGap="1%">
             <!-- column -->
@@ -98,12 +101,12 @@
               fxFlex.gt-xs="100"
               fxFlex="100"
             >
-            <h3>Vehicle Description</h3>
-            <h3>Vehicle Finance Amount</h3>
-            <h3>Payment Term </h3>
-            <h3>Interest Rate </h3>
-            <h3>Total Monthly Payment </h3>
-            <h2>Total Payment </h2>
+            <h3>Vehicle Description{{item.vehicledescription}}</h3>
+            <h3>Vehicle Finance Amount{{item.vehiclefinanceamount}}</h3>
+            <h3>Payment Term {{item.paymenttermmonths}}</h3>
+            <h3>Interest Rate {{item.interestrate}}</h3>
+            <h3>Total Monthly Payment {{item.monthlypaymentamount}}</h3>
+            <h2>Total Payment {{item.totalpaymentamount}}</h2>
           </div>
           </div>
         </mat-card>
