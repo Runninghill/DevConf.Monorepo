@@ -1,4 +1,16 @@
-# Workshop checklist
+# Important
+To facilitate your understanding and follow along with the blog post, we have organized the repository into two branches: the Main branch and the Template branch.
+
+1. Main Branch: The Finished Application
+The Main branch of this repository contains the fully developed and polished version of the vehicle finance calculator application. If you're interested in exploring the final product or examining the complete codebase, you can access it directly from the Main branch. This branch represents the culmination of our workshop and showcases the full potential of AI tools in accelerating full stack application development.
+
+2. Template Branch: Follow the Blog Post
+If you wish to dive into the workshop step-by-step and follow the guidance provided in the corresponding blog post, we recommend checking out the Template branch. This branch serves as a starting point, providing you with a template that aligns with the initial stage of the application development process as described in the blog post. By checking out the Template branch, you'll have access to the codebase in its initial state, allowing you to follow the blog post instructions accurately.
+
+Whether you choose to explore the Main branch to view the finished application or check out the Template branch to follow the blog post, this repository caters to your individual learning preferences. We encourage you to make the most of both branches to gain a comprehensive understanding of the workshop and the concepts discussed in the blog post.
+
+Happy coding and learning!
+# Blog checklist
 
 - Docker
 - VSCODE
